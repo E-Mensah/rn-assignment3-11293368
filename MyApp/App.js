@@ -1,6 +1,7 @@
 import React from 'react';
-import Layout1 from './components/Layout1'
+import Layout1 from './components/Layout1';
 import SearchbarAndButton from './components/SearchbarAndButton';
+import Categories from './components/Categories';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { useFonts } from 'expo-font';
@@ -30,6 +31,8 @@ export default function App() {
       <Layout1 />
 
       <SearchbarAndButton />
+
+      <Categories />
       
       
 
