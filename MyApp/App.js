@@ -1,9 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { useFonts } from 'expo-font';
 
 export default function App() {
+  
+  const [fontsLoaded] = useFonts({
+    'Lato-Regular': require('./assets/fonts/Lato/Lato-Regular.ttf'),
+    'Lato-Bold': require('./assets/fonts/Lato/Lato-Bold.ttf'),
+  });
+
+  if (!fontsLoaded) {
+    return null; 
+  }
+
   return (
-    <View style={styles.container}>
+    <View style={styles.mainContainer}>
       <StatusBar 
         backgroundColor="#f7f0e8" 
         barStyle="light-content"   
@@ -14,10 +25,14 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  container: {
+  mainContainer: {
+    fontFamily: 'Lato-Regular',
+    backgroundColor: '#f7f0e8',
+    paddingLeft: 20,
+    paddingRight: 20, 
+    paddingTop: 50,
+    marginBottom: 30,
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    gap: 20
   },
 });
