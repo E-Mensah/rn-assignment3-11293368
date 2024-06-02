@@ -1,5 +1,6 @@
-import Layout1 from './components/Layout1'
 import React from 'react';
+import Layout1 from './components/Layout1'
+import SearchbarAndButton from './components/SearchbarAndButton';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { useFonts } from 'expo-font';
@@ -27,6 +28,8 @@ export default function App() {
       />
       
       <Layout1 />
+
+      <SearchbarAndButton />
       
       
 
@@ -41,7 +44,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#f7f0e8',
     paddingLeft: 20,
     paddingRight: 20, 
-    paddingTop: 50,
     marginBottom: 30,
     flex: 1,
     gap: 20
