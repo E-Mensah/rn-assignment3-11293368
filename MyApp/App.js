@@ -1,6 +1,11 @@
+import Layout1 from './components/Layout1'
+import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { useFonts } from 'expo-font';
+
+
+
 
 export default function App() {
   
@@ -20,6 +25,12 @@ export default function App() {
         barStyle="light-content"   
         translucent={false}   
       />
+      
+      <Layout1 />
+      
+      
+
+      
     </View>
   );
 }
