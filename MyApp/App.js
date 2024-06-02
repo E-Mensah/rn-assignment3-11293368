@@ -2,6 +2,7 @@ import React from 'react';
 import Layout1 from './components/Layout1';
 import SearchbarAndButton from './components/SearchbarAndButton';
 import Categories from './components/Categories';
+import TaskView from './components/TaskView';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { useFonts } from 'expo-font';
@@ -33,10 +34,9 @@ export default function App() {
       <SearchbarAndButton />
 
       <Categories />
-      
-      
 
-      
+      <TaskView />
+            
     </View>
   );
 }
@@ -47,8 +47,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#f7f0e8',
     paddingLeft: 20,
     paddingRight: 20, 
-    marginBottom: 30,
     flex: 1,
-    gap: 20
+    gap: 20,
+    paddingBottom: 50,
   },
 });
